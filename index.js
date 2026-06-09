@@ -8,7 +8,8 @@ app.get("/health", (req, res) => {
 
 app.get("/", (req, res) => {
   res.send({
-    message: "Yoh Man V5 now working fine - Github action with Docker",
+    message:
+      "Yoh Man V6 now working fine - Github action with Docker - let's try",
     status: "good - nice",
   });
 });
