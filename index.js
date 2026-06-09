@@ -9,7 +9,7 @@ app.get("/health", (req, res) => {
 app.get("/", (req, res) => {
   res.send({
     message: "Yoh Man V4 now working fine - Github action",
-    status: "good",
+    status: "good - nice",
   });
 });
 
