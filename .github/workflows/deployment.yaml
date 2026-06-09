@@ -1,0 +1,26 @@
+name: node deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: deploy on server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: root
+          key: ${{ secrets.PRIVATE_KEY }}
+          script: |
+            cd /root/dev-test/basic-deployment
+            git pull
+            npm install
+            pm2 restart 0
