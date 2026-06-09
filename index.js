@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   res.send({
     message:
       "Yoh Man V7 now working fine - Github action with Docker - let's try 🎶 http",
-    status: "good - nice - also Caddy v2",
+    status: "good - nice - also Caddy v3 ssl",
   });
 });
 
