@@ -8,7 +8,7 @@ app.get("/health", (req, res) => {
 
 app.get("/", (req, res) => {
   res.send({
-    message: "Yoh Man V3 - Github action",
+    message: "Yoh Man V4 - Github action",
     status: "good",
   });
 });
