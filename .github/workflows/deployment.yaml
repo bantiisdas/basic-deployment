@@ -37,5 +37,5 @@ jobs:
           script: |
             sudo docker rm -f simple-server || true
             sudo docker pull supdev20/simple-server
-            sudo docker run -d --name simple-server --restart unless-stopped -p 8000:8000 supdev20/simple-server
+            sudo docker run -d --name simple-server --restart unless-stopped -p 80:8000 supdev20/simple-server
             sudo docker image prune -f
