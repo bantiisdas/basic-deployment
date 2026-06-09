@@ -1,0 +1,17 @@
+services:
+  nodejs-server:
+    image: supdev20/simple-server
+    deploy:
+      replicas: 5
+    networks:
+      - test-server
+  caddy:
+    image: caddy:latest
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+    networks:
+      - test-server
+
+networks:
+  test-server:
+    driver: bridge
