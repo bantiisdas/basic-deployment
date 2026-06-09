@@ -37,4 +37,4 @@ jobs:
           script: |
             docker rm -f simple-server || true
             docker pull supdev20/simple-server
-            docker run -d --name simple-server -p 8000:8000 supdev20/simple-server
+            docker run -d --name simple-server --restart unless-stopped -p 8000:8000 supdev20/simple-server
